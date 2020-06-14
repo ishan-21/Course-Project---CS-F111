@@ -2,7 +2,6 @@
 #include<stdlib.h>
 
 struct quest{
-  char ques[400];
   char correctAns;
 };
 
@@ -28,6 +27,7 @@ int main()
   printf("PRIZE MONEY DISTRIBUTION:-\n");
   printf("PRESS ANY KEY ON YOUR KEYBOARD TO CONTINUE\n");
   scanf("%c", &start);
+
   while( 1 )
   {
     if ( &start != NULL )
@@ -48,33 +48,44 @@ int main()
   *currentWorth = 0 ;
   *definiteWorth = 0 ;
 
+  FILE * fp;
+  fp = fopen("question.txt","r");
+
   for ( int i = 0 ; i < 15 ; i++ ) {
     char ans;
-    printf("Question %d:\n",i+1);
-    printf("A> option a\tB> option b\nC> option c\tD> option d\n");
-    printf("Enter your Answer Sir/Ma'am:");
+    char c;
+
+    for ( int i = 0 ; i < 6  ; i++){
+        do {
+            c = fgetc(fp);
+            printf("%c",c);
+        } while ( c != '\n' );
+
+    }
+
+    printf("\nEnter your Answer Sir/Ma'am:");
     scanf("\n");
     scanf("%c",&ans);
     if ( checkQuestion( ans , (list+i)->correctAns )){
       updateCurrentWorth( prize[i] , currentWorth );
       updateDefiniteWorth( i , currentWorth , definiteWorth );
-      printf("Congratulations!!!,You have won %d rupees for this question\n" , prize[i]);
-      printf("You currently have %d rupees in your pocket\n" , *currentWorth );
+      printf("\nCongratulations!!!,You have won %d rupees for this question\n" , prize[i]);
+      printf("\nYou currently have %d rupees in your pocket\n\n" , *currentWorth );
       if ( i > 3 )
-      printf("Even if you get the next question wrong, you will take %d rupees home\n" , *definiteWorth);
+      printf("\nEven if you get the next question wrong, you will take %d rupees home\n" , *definiteWorth);
     }
     else{
-      printf("Sorry!!! But your answer is wrong , you will take %d rupees home\n" , *definiteWorth);
+      printf("\nSorry!!! But your answer is wrong , the correct ans was %c. You will take %d rupees home\n" , ( list + i )->correctAns, *definiteWorth);
       if ( i <= 4 )
-      printf("Even if you have lost here today, you have won hearts all over the world my friend!\n");
+      printf("\nEven if you have lost here today, you have won hearts all over the world my friend!\n");
       if ( i >4 && i<= 9)
-      printf("You have won something and something is not nothing so REJOICE!\n");
+      printf("\nYou have won something and something is not nothing so REJOICE!\n");
       if ( i > 9 )
-      printf("Even if you are not a CROREPATI you still leave a LAHKPATI from this stage\n");
+      printf("\nEven if you are not a CROREPATI you still leave a LAHKPATI from this stage\n");
       return 0;
     }
   }
-  printf("MUBARAK HO!!! AAP CROREPATI BAN GAYE!!!");
+  printf("\nMUBARAK HO!!! AAP CROREPATI BAN GAYE!!!\n\n");
 
 }
 
@@ -115,6 +126,4 @@ void fillArray ( int n , question array[] ){
     }
   }
 }
-// 1st version 6/13/2020
- 
-
+// 2nd version 6/14/2020 1:25 pm
