@@ -8,7 +8,7 @@ struct quest{
 
 typedef struct quest question;
 
-void fillArray ( int n , question array[15] );
+void fillArray ( int n , question array[] );
 
 void updateCurrentWorth( int reward , int * current );
 
