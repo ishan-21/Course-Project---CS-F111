@@ -15,31 +15,14 @@ int checkQuestion( char ans , char correctAns );
 
 void updateDefiniteWorth( int i , int * current , int * definite );
 
+int prize[15]={1000,1000,1000,2000,5000,10000,20000,40000,80000,160000,320000,610000,1250000,2500000,5000000};
+
+
+
+
+
 int main()
 {
-  char  start;
-  printf("WELCOME TO KAUN BANEGA CROREPATI!\n");
-  printf("THIS GAME HAS 15 QUESTIONS\nEACH QUESTION HAS 4 CHOICES OUT OF WHICH ONLY ONE IS CORRECT\n");
-  printf("WRONG ANSWER TO ANY OF THE QUESTIONS LEADS TO IMMEDIATE TERMINATION\n");
-  printf("WE ALSO PROVIDE 2 LIFE-LINES: 50-50 AND FLIP THE QUESTION\n");
-  printf("50-50: THIS WILL LEAD TO REMOVAL OF 2 WRONG CHOICES OUT OF THE TOTAL 4\n");
-  printf("FLIP THE QUESTION: THIS WILL CHANGE THE CURRENT QUESTION ENTIRELY\n");
-  printf("PRIZE MONEY DISTRIBUTION:-\n");
-  printf("PRESS ANY KEY ON YOUR KEYBOARD TO CONTINUE\n");
-  scanf("%c", &start);
-
-  while( 1 )
-  {
-    if ( &start != NULL )
-      break;
-    else
-      return 0;
-  }
-
-  question list[15];
-  fillArray( 15 ,  list );
-
-  int prize[15]={1000,1000,1000,2000,5000,10000,20000,40000,80000,160000,320000,610000,1250000,2500000,5000000};
 
   int * currentWorth = malloc(sizeof(int));
 
@@ -51,8 +34,42 @@ int main()
   FILE * fp;
   fp = fopen("question.txt","r");
 
+  printf("WELCOME TO KAUN BANEGA CROREPATI!\n\n");
+  printf("THIS GAME HAS 15 QUESTIONS\nEACH QUESTION HAS 4 CHOICES OUT OF WHICH ONLY ONE IS CORRECT\n\n");
+  printf("WRONG ANSWER TO ANY OF THE QUESTIONS LEADS TO IMMEDIATE TERMINATION\n\n");
+  printf("WE ALSO PROVIDE 2 LIFE-LINES: 50-50 AND FLIP THE QUESTION\n\n");
+  printf("50-50: THIS WILL LEAD TO REMOVAL OF 2 WRONG CHOICES OUT OF THE TOTAL 4\n\n");
+  printf("FLIP THE QUESTION: THIS WILL CHANGE THE CURRENT QUESTION ENTIRELY\n\n");
+  printf("PRIZE MONEY DISTRIBUTION:-\n\n");
+  printf("QUESTION NUMBER\t   PRIZE MONEY FOR THAT QUESTION\t   NET PRIZE MONEY UPTO THAT QUESTION\n");
+  for ( int i = 0 ; i < 15 ; i++ ){
+    *( currentWorth ) = *( currentWorth ) + *( prize + i );
+    printf("%d\t\t\t%d\t\t\t\t\t%d", i+1 , *( prize + i ) , *(currentWorth));
+    if ( i == 4 || i == 9 || i == 13)
+    printf("\t\tDEFINITE TAKE HOME LEVEL");
+    printf("\n\n");
+  }
+
+  *currentWorth = 0; // note that the pointer reference value was changed during  display of prizes , naturally we had to initialize it to 0 here
+
+  char  start;
+  printf("PRESS ANY KEY ON YOUR KEYBOARD TO CONTINUE ( and then press \" ENTER \" if you haven't pressed ENTER \n");
+  scanf("%c", &start); // here I did not use system("pause") because it's a window command and would not  work in MAC or LINUX
+
+  while( 1 )
+  {
+    if ( &start != NULL )
+      break;
+    else
+      return 0;
+  }
+  printf("\nLETS PLAY!!!!\n\n");
+  question list[15];
+  fillArray( 15 ,  list );
+
   for ( int i = 0 ; i < 15 ; i++ ) {
     char ans;
+    char finalAns;
     char c;
 
     for ( int i = 0 ; i < 6  ; i++){
@@ -63,10 +80,31 @@ int main()
 
     }
 
-    printf("\nEnter your Answer Sir/Ma'am:");
+    printf("\n What do you think is the answer:");
     scanf("\n");
-    scanf("%c",&ans);
-    if ( checkQuestion( ans , (list+i)->correctAns )){
+    scanf("%c",&ans );
+    printf("Do you want to lock it ( Press 'Y' for Yes and 'N' for No):");
+
+    while ( 1 ){
+
+        char prompt;
+        scanf("\n");
+        scanf("%c" , &prompt );
+
+        if ( prompt == 'Y' || prompt == 'Y' + 'a' - 'A'){
+            finalAns = ans;
+            break;
+        } else if ( prompt == 'N' || prompt == 'N' + 'a' - 'A') {
+            printf("Take your time and Enter the answer you want to lock:");
+            scanf("\n");
+            scanf("%c", &finalAns);
+            break;
+        } else {
+            printf("Y and N are the only valid choices. Please Enter a valid Choice:");
+        }
+
+    }
+    if ( checkQuestion( finalAns , (list+i)->correctAns )){
       updateCurrentWorth( prize[i] , currentWorth );
       updateDefiniteWorth( i , currentWorth , definiteWorth );
       printf("\nCongratulations!!!,You have won %d rupees for this question\n" , prize[i]);
@@ -126,4 +164,3 @@ void fillArray ( int n , question array[] ){
     }
   }
 }
-// 2nd version 6/14/2020 1:25 pm
