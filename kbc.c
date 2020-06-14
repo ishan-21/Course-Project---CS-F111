@@ -17,6 +17,10 @@ void updateDefiniteWorth( int i , int * current , int * definite );
 
 int prize[15]={1000,1000,1000,2000,5000,10000,20000,40000,80000,160000,320000,610000,1250000,2500000,5000000};
 
+
+
+
+
 int main()
 {
 
@@ -77,8 +81,17 @@ int main()
     }
 
     printf("\n What do you think is the answer:");
-    scanf("\n");
-    scanf("%c",&ans );
+    while ( 1 ){
+      scanf("\n");
+      scanf("%c",&ans );
+      printf("\n");
+      if ( ans == 'a' || ans == 'A' || ans == 'b' || ans == 'B' || ans == 'c' || ans == 'C' || ans == 'd' || ans == 'D'){
+      break;
+    }else{
+      printf("Enter a valid response (\"A\" , \"B\" , \"C\" or \"D\"):");
+    }
+
+    }
     printf("Do you want to lock it ( Press 'Y' for Yes and 'N' for No):");
 
     while ( 1 ){
@@ -86,7 +99,7 @@ int main()
         char prompt;
         scanf("\n");
         scanf("%c" , &prompt );
-
+        printf("\n");
         if ( prompt == 'Y' || prompt == 'Y' + 'a' - 'A'){
             finalAns = ans;
             break;
