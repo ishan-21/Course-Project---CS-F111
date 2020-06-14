@@ -95,7 +95,7 @@ void updateDefiniteWorth( int i , int * current , int * definite ){
   }
 }
 
-void fillArray ( int n , question array[n] ){
+void fillArray ( int n , question array[] ){
 
   for ( int i = 0 ; i < n ; i++ ){
 
