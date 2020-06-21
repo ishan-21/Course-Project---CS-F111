@@ -96,56 +96,120 @@ int main()
   fillReplacementFiftyFiftyQuestions( list , fp );
 
   for ( int i = 0 ; i < NUMBER_OF_QUESTIONS ; i++ ) {
-    char ans;
-    char finalAns;
-    char c;
+    char promptLifeLine ;
+    char promptWhichLfeLine ;
+    char prompt ;
+    char ans ;
+    char finalAns ;
+    char c ;
 
     for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
       printf("%s\n",( list + i )->originalQues[j] );
     }
 
-    for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
-      printf("%s\n",( list + i )->originalFiftyFiftyQues[j] );
-    }
 
-    for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
-      printf("%s\n",( list + i )->replacementQues[j] );
-    }
 
-    for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
-      printf("%s\n",( list + i )->replacementFiftyFiftyQues[j] );
-    }
+    printf("\n Do you want to use a life-line (Press \'Y\' for Yes and \'N\' for No): ");
+    while ( 1 )
+{
+      scanf("\n");
+      scanf("%c" , &promptLifeLine );
+      printf("\n");
+      if ( promptLifeLine == 'Y' || promptLifeLine == 'y'){
+        printf("Which life line ( Press \'F\' for 50-50 and \'S\' for swapping the question): ");
+        while ( 1 ){
+          scanf("%c" , &promptWhichLfeLine );
+          if ( promptWhichLfeLine == 'F' || promptWhichLfeLine == 'f' ){
+              for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
+                printf("%s\n" , (list + i )->originalFiftyFiftyQues[j]);
+              }
 
-    printf("\n What do you think is the answer:");
+              printf("\nDo you want to use another life-line (Press \'Y\' for Yes and \'N\' for No): ");
+
+              while( 1 ){
+              scanf("%c" , &prompt );
+              if ( prompt == 'Y' || prompt == 'y' ){
+                printf("\n You only option now is swapping the ques.\n");
+                for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
+                  printf("%s\n" , (list + i )->replacementQues[j]);
+              }
+                break;
+          }
+              else if ( prompt == 'N' || prompt == 'n' ){
+                break ;
+              }
+              else {
+                printf("Please Enter a valid response: ");
+              }
+        }
+        break ;
+      }
+          else if ( promptWhichLfeLine == 'S' || promptWhichLfeLine == 's'){
+            for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
+              printf("%s\n" , (list + i )->replacementQues[j]);
+            }
+
+            printf("\nDo you want to use another life-line (Press \'Y\' for Yes and \'N\' for No): ");
+
+            while( 1 ){
+            scanf("%c" , &prompt );
+            if ( prompt == 'Y' || prompt == 'y' ){
+              printf("\n You only option now is using 50-50.\n");
+              for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
+                printf("%s\n" , (list + i )->replacementFiftyFiftyQues[j]);
+            }
+              break;
+        }
+            else if ( prompt == 'N' || prompt == 'n' ){
+              break ;
+        }
+            else {
+              printf("Please Enter a valid response: ");
+        }
+        break ;
+    }
+    break ;
+  }
+}
+}
+else if ( promptLifeLine == 'N' || promptLifeLine == 'n'){
+    break ;
+  }
+else {
+  printf("Please Enter a Valid Response: ");
+}
+}
+
+
+  printf("\n What do you think is the answer:");
     while ( 1 ){
       scanf("\n");
       scanf("%c",&ans );
       printf("\n");
       if ( ans == 'a' || ans == 'A' || ans == 'b' || ans == 'B' || ans == 'c' || ans == 'C' || ans == 'd' || ans == 'D'){
-      break;
-    }else{
-      printf("Enter a valid response (\"A\" , \"B\" , \"C\" or \"D\"):");
-    }
+        break;
+      }else{
+        printf("Enter a valid response (\"A\" , \"B\" , \"C\" or \"D\"):");
+      }
 
     }
-    printf("Do you want to lock it ( Press 'Y' for Yes and 'N' for No):");
 
+  printf("Do you want to lock it ( Press 'Y' for Yes and 'N' for No):");
     while ( 1 ){
-
-        char prompt;
-        scanf("\n");
-        scanf("%c" , &prompt );
-        printf("\n");
-        if ( prompt == 'Y' || prompt == 'y' ){
-            finalAns = ans;
-            break;
-        } else if ( prompt == 'N' || prompt == 'n' ) {
-            printf("Take your time and Enter the answer you want to lock:");
-            scanf("\n");
-            scanf("%c", &finalAns);
-            break;
-        } else {
-            printf("Y and N are the only valid choices. Please Enter a valid Choice:");
+      char prompt;
+      scanf("\n");
+      scanf("%c" , &prompt );
+      printf("\n");
+      if ( prompt == 'Y' || prompt == 'y' ){
+          finalAns = ans;
+          break;
+      }else if ( prompt == 'N' || prompt == 'n' ) {
+          printf("Take your time and Enter the answer you want to lock:");
+          scanf("\n");
+          scanf("%c", &finalAns);
+          break;
+      }else {
+          printf("Y and N are the only valid choices. Please Enter a valid Choice:");
         }
 
     }
