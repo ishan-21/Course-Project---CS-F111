@@ -354,7 +354,7 @@ void fillReplacementFiftyFiftyQuestions ( question array[] , FILE * fp ){
 }
 
 void fillOriginalAns ( question array[] ){
-
+  for( int i = 0 ; i < NUMBER_OF_QUESTIONS ; i++ ){
        if (i==4||i==11||i==12)
        ( array + i )->originalCorrectAns = 'A' ;
        else if (i==0||i==8||i==10||i==14)
@@ -363,10 +363,11 @@ void fillOriginalAns ( question array[] ){
        ( array + i )->originalCorrectAns = 'D' ;
        else
        ( array + i )->originalCorrectAns = 'B' ;
+  }
 }
 
   void fillReplacementAns ( question array[] ){
-
+    for( int i = 0 ; i < NUMBER_OF_QUESTIONS ; i++ ){
         if (i==0||i==6||i==11)
         ( array + i )->replacementCorrectAns = 'A' ;
         else if (i==1||i==7)
@@ -375,5 +376,6 @@ void fillOriginalAns ( question array[] ){
         ( array + i )->replacementCorrectAns = 'C' ;
         else
         ( array + i )->replacementCorrectAns = 'B' ;
+    }
         
     }
