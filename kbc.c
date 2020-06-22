@@ -43,6 +43,7 @@ int main()
 {
   int countFiftyFifty = 1 ;
   int countSwap = 1 ;
+  int typeOfQuesUsed = 0 ;
 
   int * currentWorth = malloc(sizeof(int));
   int * definiteWorth = malloc(sizeof(int));
@@ -151,6 +152,7 @@ int main()
                 countSwap--;
                 printf("\nYour only option now is swapping the ques.\n\n");
                 printf("SWAP THE QUESTION USED\n\n");
+                typeOfQuesUsed = 1 ;
                 for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
                   printf("%s\n" , (list + i )->replacementQues[j]);
               }
@@ -173,6 +175,7 @@ int main()
             }
             countSwap--;
             printf("SWAP THE QUESTION USED\n\n");
+            typeOfQuesUsed = 1 ;
             for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
               printf("%s\n" , (list + i )->replacementQues[j]);
             }
@@ -189,6 +192,7 @@ int main()
               countFiftyFifty--;
               printf("\nYour only option now is using 50-50.\n\n");
               printf("50-50 USED\n\n");
+              typeOfQuesUsed = 0 ;
               for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
                 printf("%s\n" , (list + i )->replacementFiftyFiftyQues[j]);
             }
@@ -251,6 +255,8 @@ if( countSwap == 0 && countFiftyFifty == 0 ){
         }
 
     }
+
+    if( typeOfQuesUsed == 0 ){
     if ( checkQuestion( finalAns , (list+i)->originalCorrectAns )){
       updateCurrentWorth( prize[i] , currentWorth );
       updateDefiniteWorth( i , currentWorth , definiteWorth );
@@ -270,6 +276,27 @@ if( countSwap == 0 && countFiftyFifty == 0 ){
       return 0;
     }
   }
+  else{
+    if ( checkQuestion( finalAns , (list+i)->replacementCorrectAns )){
+      updateCurrentWorth( prize[i] , currentWorth );
+      updateDefiniteWorth( i , currentWorth , definiteWorth );
+      printf("Congratulations!!!,You have won %d rupees for this question\n" , prize[i]);
+      printf("\nYou currently have %d rupees in your pocket\n\n" , *currentWorth );
+      if ( i > 3 )
+      printf("\nEven if you get the next question wrong, you will take %d rupees home\n" , *definiteWorth);
+    }
+    else{
+      printf("\nSorry!!! But your answer is wrong , the correct ans was %c. You will take %d rupees home\n" , ( list + i )->originalCorrectAns, *definiteWorth);
+      if ( i < 5 )
+      printf("\nEven if you have lost here today, you have won hearts all over the world my friend!\n");
+      if ( i > 4 && i < 10)
+      printf("\nYou have won something and something is not nothing so REJOICE!\n");
+      if ( i > 9 )
+      printf("\nEven if you are not a CROREPATI you still leave a LAHKPATI from this stage\n");
+      return 0;
+    }
+  }
+}
   printf("\nMUBARAK HO!!! AAP CROREPATI BAN GAYE!!!\n\n");
 
 }
