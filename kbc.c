@@ -41,6 +41,8 @@ int prize[15]={1000,1000,1000,2000,5000,10000,20000,40000,80000,160000,320000,61
 
 int main()
 {
+  int countFiftyFifty = 1 ;
+  int countSwap = 1 ;
 
   int * currentWorth = malloc(sizeof(int));
   int * definiteWorth = malloc(sizeof(int));
@@ -109,27 +111,46 @@ int main()
 
 
 
-    printf("\n Do you want to use a life-line (Press \'Y\' for Yes and \'N\' for No): ");
+
     while ( 1 )
 {
+      if( countSwap == 0 && countSwap == 0 ){
+        break ;
+      }
+      printf("\nDo you want to use a life-line (Press \'Y\' for Yes and \'N\' for No): ");
       scanf("\n");
       scanf("%c" , &promptLifeLine );
       printf("\n");
       if ( promptLifeLine == 'Y' || promptLifeLine == 'y'){
         printf("Which life line ( Press \'F\' for 50-50 and \'S\' for swapping the question): ");
         while ( 1 ){
+          scanf("\n");
           scanf("%c" , &promptWhichLfeLine );
-          if ( promptWhichLfeLine == 'F' || promptWhichLfeLine == 'f' ){
+          printf("\n");
+          if ( ( promptWhichLfeLine == 'F' || promptWhichLfeLine == 'f' ) ){
+            if( countFiftyFifty == 0 ){
+              printf("\nYou've already used 50-50\n");
+              printf("\nPlease enter an available life-line: ");
+              continue ;
+            }
+            countFiftyFifty--;
+            printf("50-50 USED\n\n");
               for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
                 printf("%s\n" , (list + i )->originalFiftyFiftyQues[j]);
               }
-
-              printf("\nDo you want to use another life-line (Press \'Y\' for Yes and \'N\' for No): ");
+              if( countSwap == 0){
+                printf("\nYou've already used Swap the Question.\n\n");
+                break;
+              }
+              printf("Do you want to use another life-line (Press \'Y\' for Yes and \'N\' for No): ");
 
               while( 1 ){
+              scanf("\n");
               scanf("%c" , &prompt );
               if ( prompt == 'Y' || prompt == 'y' ){
-                printf("\n You only option now is swapping the ques.\n");
+                countSwap--;
+                printf("\nYour only option now is swapping the ques.\n\n");
+                printf("SWAP THE QUESTION USED\n\n");
                 for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
                   printf("%s\n" , (list + i )->replacementQues[j]);
               }
@@ -144,17 +165,30 @@ int main()
         }
         break ;
       }
-          else if ( promptWhichLfeLine == 'S' || promptWhichLfeLine == 's'){
+          else if ( ( promptWhichLfeLine == 'S' || promptWhichLfeLine == 's' )){
+            if( countSwap == 0 ){
+              printf("You've already used Swap the Question\n");
+              printf("Please enter an available life-line: ");
+              continue ;
+            }
+            countSwap--;
+            printf("SWAP THE QUESTION USED\n\n");
             for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
               printf("%s\n" , (list + i )->replacementQues[j]);
             }
-
+            if( countFiftyFifty == 0){
+              printf("You've already used 50-50.\n\n");
+              break;
+            }
             printf("\nDo you want to use another life-line (Press \'Y\' for Yes and \'N\' for No): ");
 
             while( 1 ){
+            scanf("\n");
             scanf("%c" , &prompt );
             if ( prompt == 'Y' || prompt == 'y' ){
-              printf("\n You only option now is using 50-50.\n");
+              countFiftyFifty--;
+              printf("\nYour only option now is using 50-50.\n\n");
+              printf("50-50 USED\n\n");
               for( int j = 0 ; j < NUMBER_OF_LINES_PER_QUESTION ; j++ ){
                 printf("%s\n" , (list + i )->replacementFiftyFiftyQues[j]);
             }
@@ -164,24 +198,28 @@ int main()
               break ;
         }
             else {
-              printf("Please Enter a valid response: ");
+              printf("Please enter a valid Response: ");
         }
-        break ;
     }
     break ;
   }
 }
+break ;
 }
 else if ( promptLifeLine == 'N' || promptLifeLine == 'n'){
     break ;
   }
 else {
-  printf("Please Enter a Valid Response: ");
+  printf("Please enter a valid Response\n\n");
 }
 }
 
+if( countSwap == 0 && countFiftyFifty == 0 ){
+  printf("YOU HAVE ALREADY USED BOTH THE LIFELINES\n\n");
+}
 
-  printf("\n What do you think is the answer:");
+
+  printf("\nWhat do you think is the answer:");
     while ( 1 ){
       scanf("\n");
       scanf("%c",&ans );
@@ -216,7 +254,7 @@ else {
     if ( checkQuestion( finalAns , (list+i)->originalCorrectAns )){
       updateCurrentWorth( prize[i] , currentWorth );
       updateDefiniteWorth( i , currentWorth , definiteWorth );
-      printf("\nCongratulations!!!,You have won %d rupees for this question\n" , prize[i]);
+      printf("Congratulations!!!,You have won %d rupees for this question\n" , prize[i]);
       printf("\nYou currently have %d rupees in your pocket\n\n" , *currentWorth );
       if ( i > 3 )
       printf("\nEven if you get the next question wrong, you will take %d rupees home\n" , *definiteWorth);
