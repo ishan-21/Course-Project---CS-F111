@@ -377,12 +377,12 @@ void fillOriginalAns ( question array[] ){
   void fillReplacementAns ( question array[] ){
 
         if(i==0||i==6||i==11)
-        ( array + i )->replacementCorrectAns = 'A' ;
+          ( array + i )->replacementCorrectAns = 'A' ;
         else if(i==1||i==7)
-        ( array + i )->replacementCorrectAns = 'D' ;
+          ( array + i )->replacementCorrectAns = 'D' ;
         else if(i==2||i==9||i==10||i==13)
-        ( array + i )->replacementCorrectAns = 'C' ;
+          ( array + i )->replacementCorrectAns = 'C' ;
         else
-        ( array + i )->replacementCorrectAns = 'B' ;
+          ( array + i )->replacementCorrectAns = 'B' ;
         
     }
