@@ -377,5 +377,4 @@ void fillOriginalAns ( question array[] ){
         else
         ( array + i )->replacementCorrectAns = 'B' ;
     }
-        
-    }
+  }
