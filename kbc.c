@@ -376,21 +376,52 @@ void fillOriginalAns ( question array[] ){
 
   void fillReplacementAns ( question array[] ){
 
-    for ( int i = 0 ; i < NUMBER_OF_QUESTIONS ; i++ ){
-
-      switch ( i % 4 ){
+      switch ( i ){
         case ( 0 ):
         ( array + i )->replacementCorrectAns = 'A' ;
         break;
         case ( 1 ):
-        ( array + i )->replacementCorrectAns = 'B' ;
+        ( array + i )->replacementCorrectAns = 'D' ;
         break;
         case ( 2 ):
         ( array + i )->replacementCorrectAns = 'C' ;
         break;
         case ( 3 ):
-        ( array + i )->replacementCorrectAns = 'D' ;
+        ( array + i )->replacementCorrectAns = 'B' ;
         break;
-            }
-        }
+        case (4):
+        ( array + i )->replacementCorrectAns = 'B';
+        break;
+        case (5):
+        ( array + i )->replacementCorrectAns = 'B';
+        break;
+        case (6):
+        ( array + i )->replacementCorrectAns = 'A';
+        break;
+        case (7):
+        ( array + i )->replacementCorrectAns = 'D';
+        break;
+        case (8):
+        ( array + i )->replacementCorrectAns = 'B';
+        break;
+        case (9):
+        ( array + i )->replacementCorrectAns = 'C';
+        break;
+        case (10):
+        ( array + i )->replacementCorrectAns = 'C';
+        break;
+        case (11):
+        ( array + i )->replacementCorrectAns = 'A';
+        break;
+        case (12):
+        ( array + i )->replacementCorrectAns = 'B';
+        break;
+        case (13):
+        ( array + i )->replacementCorrectAns = 'C';
+        break;
+        case (14):
+        ( array + i )->replacementCorrectAns = 'B';
+        break;
+         
+      }
     }
