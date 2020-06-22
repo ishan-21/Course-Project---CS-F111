@@ -376,52 +376,13 @@ void fillOriginalAns ( question array[] ){
 
   void fillReplacementAns ( question array[] ){
 
-      switch ( i ){
-        case ( 0 ):
+        if(i==0||i==6||i==11)
         ( array + i )->replacementCorrectAns = 'A' ;
-        break;
-        case ( 1 ):
+        else if(i==1||i==7)
         ( array + i )->replacementCorrectAns = 'D' ;
-        break;
-        case ( 2 ):
+        else if(i==2||i==9||i==10||i==13)
         ( array + i )->replacementCorrectAns = 'C' ;
-        break;
-        case ( 3 ):
+        else
         ( array + i )->replacementCorrectAns = 'B' ;
-        break;
-        case (4):
-        ( array + i )->replacementCorrectAns = 'B';
-        break;
-        case (5):
-        ( array + i )->replacementCorrectAns = 'B';
-        break;
-        case (6):
-        ( array + i )->replacementCorrectAns = 'A';
-        break;
-        case (7):
-        ( array + i )->replacementCorrectAns = 'D';
-        break;
-        case (8):
-        ( array + i )->replacementCorrectAns = 'B';
-        break;
-        case (9):
-        ( array + i )->replacementCorrectAns = 'C';
-        break;
-        case (10):
-        ( array + i )->replacementCorrectAns = 'C';
-        break;
-        case (11):
-        ( array + i )->replacementCorrectAns = 'A';
-        break;
-        case (12):
-        ( array + i )->replacementCorrectAns = 'B';
-        break;
-        case (13):
-        ( array + i )->replacementCorrectAns = 'C';
-        break;
-        case (14):
-        ( array + i )->replacementCorrectAns = 'B';
-        break;
-         
-      }
+        
     }
