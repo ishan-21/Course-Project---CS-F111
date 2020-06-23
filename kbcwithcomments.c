@@ -5,63 +5,62 @@
 
 #define NUMBER_OF_QUESTIONS 15	//setting NUMBER_OF_QUESTIONS constant at 15
 #define NUMBER_OF_LINES_PER_QUESTION 6	//setting NUMBER_OF_LINES_PER_QUESTION constant at 6
-#define NUMBER_OF_CHARACTERS_PER_QUESTION 400	//setting NUMBER_OF_CHARACTERS_PER_QUESTION constant at 400
+#define NUMBER_OF_CHARACTERS_PER_LINE 400	//setting NUMBER_OF_CHARACTERS_PER_LINE constant at 400
 
 /*
-defining a structure 'quest' with many variables related to the question and its answers and lifelines
+defining a structure 'quest' with many variables related to the questions and their answers and lifelines
 */
 
 struct quest
 {
   char originalCorrectAns;	//variable to store answer of the original question
-  char originalQues[NUMBER_OF_LINES_PER_QUESTION][NUMBER_OF_CHARACTERS_PER_QUESTION];	//variable to store the original question
-  char originalFiftyFiftyQues[NUMBER_OF_LINES_PER_QUESTION][NUMBER_OF_CHARACTERS_PER_QUESTION];	//variable to store the question after 50-50 has been applied
+  char originalQues[NUMBER_OF_LINES_PER_QUESTION][NUMBER_OF_CHARACTERS_PER_LINE];	//multidimensional string type array to store the original question
+  char originalFiftyFiftyQues[NUMBER_OF_LINES_PER_QUESTION][NUMBER_OF_CHARACTERS_PER_LINE];	//multidimensional string type array to store the question after 50-50 has been applied
   char replacementCorrectAns;	//variable to store answer of the replaced question
-  char replacementQues[NUMBER_OF_LINES_PER_QUESTION][NUMBER_OF_CHARACTERS_PER_QUESTION];	//variable to store the new swapped question
-  char replacementFiftyFiftyQues[NUMBER_OF_LINES_PER_QUESTION][NUMBER_OF_CHARACTERS_PER_QUESTION];	//variable to store the question after 50-50 is applied to the swapped question
+  char replacementQues[NUMBER_OF_LINES_PER_QUESTION][NUMBER_OF_CHARACTERS_PER_LINE];	//multidimensional string type array to store the new swapped question
+  char replacementFiftyFiftyQues[NUMBER_OF_LINES_PER_QUESTION][NUMBER_OF_CHARACTERS_PER_LINE];	//multidimensional string type array to store the question after 50-50 is applied to the swapped question
 };
 
-typedef struct quest question;	//using typedef to create a new name 'question' for the structure 'quest'
+typedef struct quest question;	//using typedef to create a new name 'question' for the structure 'quest' also known as aliasing
 
 /*
 defining function prototypes
 */
 
-void fillOriginalAns (question array[]);
+void fillOriginalAns (question array[]); // to store answers to original questions in structure element originalCorrectAns
 
-void fillReplacementAns (question array[]);
+void fillReplacementAns (question array[]); // to store answers to replacement questions in structure replacementCorrectAns
 
-void updateCurrentWorth (int reward, int *current);	//function that updates current worth, the amount that he has won till now
+void updateCurrentWorth (int reward, int *current);	//to update current worth, the amount that contestant has won till that time
 
-void updateDefiniteWorth (int i, int *current, int *definite);	//function that updates definite worth, the amount that he definitely takes home
+void updateDefiniteWorth (int i, int *current, int *definite);	//to update definite worth, the amount that contestant will definitely take home
 
-int checkQuestion (char ans, char correctAns);
+int checkQuestion (char ans, char correctAns); // to check the question answered
 
-void fillOriginalQuestions (question array[], FILE * fp);
+void fillOriginalQuestions (question array[], FILE * fp); // to assign original questions to multidimensional string array originalQues
 
-void fillOriginalFiftyFiftyQuestions (question array[], FILE * fp);
+void fillOriginalFiftyFiftyQuestions (question array[], FILE * fp);// to assign 50-50 version of original questions to multidimensional string array originalFiftyFiftyQues
 
-void fillReplacementQuestions (question array[], FILE * fp);
+void fillReplacementQuestions (question array[], FILE * fp);// to assign replacement questions to multidimensional string array replacementQues
 
-void fillReplacementFiftyFiftyQuestions (question array[], FILE * fp);
+void fillReplacementFiftyFiftyQuestions (question array[], FILE * fp);// to assign 50-50 version of replacement questions to multidimensional string array replacementFiftyFiftyQues
 
 int prize[15] = { 1000, 1000, 1000, 2000, 5000, 10000, 20000, 40000, 80000, 160000, 320000, 610000, 1250000, 2500000, 5000000 };	//array 'prize' stores the additional prize money that a person wins after answering the question correctly
 
 
 
-int
-main ()				//defining main function
+int main ()				//defining main function
 {
-  int countFiftyFifty = 1;	//setting countFiftyFifty to 1
-  int countSwap = 1;		//setting countSwap to 1
+  int countFiftyFifty = 1;	//setting countFiftyFifty to 1 so that it could be used only once
+  int countSwap = 1;		//setting countSwap to 1 so that it could be used only once
   int typeOfQuesUsed = 0;	//setting typeOfQuesUsed to 0, used to signify original question
 
 /*
-malloc reserves a block of memory of the specified number of bytes
+malloc reserves a block of memory of the specified number of bytes and returns it's address
 */
 
-  int *currentWorth = malloc (sizeof (int));	//*currentWorth is used to represent the total amount that the person has won
-  int *definiteWorth = malloc (sizeof (int));	//*definiteWorth is the minimum amount the person takes home even if he answers the question wrong
+  int *currentWorth = malloc (sizeof (int));	//currentWorth is used to represent the total amount that the person has won
+  int *definiteWorth = malloc (sizeof (int));	//definiteWorth is the minimum amount the person takes home even if he answers the question wrong
 
   *currentWorth = 0;		//setting *currentWorth to 0
   *definiteWorth = 0;		//setting *definiteWorth to 0
@@ -84,22 +83,17 @@ giving error message if file not represent
     }
 
 /*
-printing information
+printing genearl information and instructions about the game
 */
 
   printf ("WELCOME TO KAUN BANEGA CROREPATI!\n\n");
-  printf
-    ("THIS GAME HAS 15 QUESTIONS\nEACH QUESTION HAS 4 CHOICES OUT OF WHICH ONLY ONE IS CORRECT\n\n");
-  printf
-    ("WRONG ANSWER TO ANY OF THE QUESTIONS LEADS TO IMMEDIATE TERMINATION\n\n");
-  printf ("WE ALSO PROVIDE 2 LIFE-LINES: 50-50 AND FLIP THE QUESTION\n\n");
-  printf
-    ("50-50: THIS WILL LEAD TO REMOVAL OF 2 WRONG CHOICES OUT OF THE TOTAL 4\n\n");
-  printf
-    ("FLIP THE QUESTION: THIS WILL CHANGE THE CURRENT QUESTION ENTIRELY\n\n");
+  printf("THIS GAME HAS 15 QUESTIONS\nEACH QUESTION HAS 4 CHOICES OUT OF WHICH ONLY ONE IS CORRECT\n\n");
+  printf("WRONG ANSWER TO ANY OF THE QUESTIONS LEADS TO IMMEDIATE TERMINATION\n\n");
+  printf("WE ALSO PROVIDE 2 LIFE-LINES: 50-50 AND FLIP THE QUESTION\n\n");
+  printf("50-50: THIS WILL LEAD TO REMOVAL OF 2 WRONG CHOICES OUT OF THE TOTAL 4\n\n");
+  printf("SWAP THE QUESTION: THIS WILL CHANGE THE CURRENT QUESTION ENTIRELY\n\n");
   printf ("PRIZE MONEY DISTRIBUTION:-\n\n");
-  printf
-    ("QUESTION NUMBER\t   PRIZE MONEY FOR THAT QUESTION\t   NET PRIZE MONEY UPTO THAT QUESTION\n");
+  printf("QUESTION NUMBER\t   PRIZE MONEY FOR THAT QUESTION\t   NET PRIZE MONEY UPTO THAT QUESTION\n");
 
 /*
 displaying prizes
@@ -109,32 +103,32 @@ displaying prizes
     {
       *(currentWorth) = *(currentWorth) + *(prize + i);
       printf ("%d\t\t\t%d\t\t\t\t\t%d", i + 1, *(prize + i), *(currentWorth));
-      if (i == 4 || i == 9 || i == 13)	//printing definite take home level to indicate that this is the minimum amount they take home if they answer correctly in that round
-	printf ("\t\tDEFINITE TAKE HOME LEVEL");
+      if (i == 4 || i == 9 || i == 13){	//printing definite take home level to indicate that this is the minimum amount they take home if they answer correctly in that round
+	       printf ("\t\tDEFINITE TAKE HOME LEVEL");
+     }
       printf ("\n\n");
     }
 
   *currentWorth = 0;		// note that the pointer reference value was changed during display of prizes, naturally we had to initialize it to 0 here
 
   char start;
-  printf
-    ("PRESS ANY KEY ON YOUR KEYBOARD TO CONTINUE ( and then press \" ENTER \" if you haven't pressed ENTER ):");
+  printf("PRESS ANY KEY ON YOUR KEYBOARD TO CONTINUE ( and then press \" ENTER \" if you haven't pressed ENTER ):");
   start = getchar ();		// here I did not use system("pause") because it's a window command and would not work in MAC or LINUX
 
 /*
-starting game if character pressed
+starting game if character entered
 */
 
   while (1)
     {
       if (&start != NULL)
-	break;
+	     break;
       else
-	return 0;
+	     return 0;
     }
   printf ("\nLET US PLAY!!!!\n\n");
 
-  question list[NUMBER_OF_QUESTIONS];	//creating a variable 'list', with type of structure 'quest'
+  question list[NUMBER_OF_QUESTIONS];	//creating an array of structure of question type named 'list', with 15 elements for representing the 15 questions separately
 
 /*
 function declaration
@@ -148,23 +142,23 @@ function declaration
   fillReplacementFiftyFiftyQuestions (list, fp);
 
 /*
-loop to  ensure independent variables for each questions
+loop to actually run the game
 */
 
   for (int i = 0; i < NUMBER_OF_QUESTIONS; i++)
     {
-      char promptLifeLine;
-      char promptWhichLfeLine;
-      char prompt;
-      char ans;
-      char finalAns;
+      char promptLifeLine; // to ask if contestant wants to use a life-line
+      char promptWhichLfeLine; // if yes then variable to ask which life-line?
+      char prompt; // to ask for instruction to use another life-line or not
+      char ans;  // to store tentative answer before actually locking it
+      char finalAns; // to store the final answer to be evaluated against the correct one
       char c;
 
 /*
-printing question
+printing original question
 */
 
-      for (int j = 0; j < NUMBER_OF_LINES_PER_QUESTION; j++)
+  for (int j = 0; j < NUMBER_OF_LINES_PER_QUESTION; j++)
 	{
 	  printf ("%s\n", (list + i)->originalQues[j]);
 	}
@@ -172,15 +166,15 @@ printing question
 
 
 
-      while (1)
+  while (1)
 	{
-	  if (countSwap == 0 && countSwap == 0)
+	  if (countSwap == 0 && countSwap == 0) // this ensures that this loop is not executed further if no life-lines left
 	    {
 	      break;
 	    }
 	  printf ("\nDo you want to use a life-line (Press \'Y\' for Yes and \'N\' for No): ");	//asking if contestant wants to use lifeline
-	  scanf ("\n");		//taking input over multiple lines
-	  scanf ("%c", &promptLifeLine);	//asking whether contestant wants to use lifeline
+	  scanf ("\n");		//taking input over multiple lines in case of invalid input or otherwise
+	  scanf ("%c", &promptLifeLine);	// taking input
 	  printf ("\n");	//new line
 	  /* if contestant wants to use lifeline */
 	  if (promptLifeLine == 'Y' || promptLifeLine == 'y')
@@ -191,8 +185,7 @@ printing question
 		  scanf ("\n");
 		  scanf ("%c", &promptWhichLfeLine);	//accepting contestant's response to which lifeline they want to choose
 		  printf ("\n");
-		  if ((promptWhichLfeLine == 'F'
-		       || promptWhichLfeLine == 'f'))
+		  if ((promptWhichLfeLine == 'F' || promptWhichLfeLine == 'f'))
 		    {
 		      /* checking if contestant has used 50-50 */
 		      if (countFiftyFifty == 0)
@@ -203,17 +196,15 @@ printing question
 			}
 		      countFiftyFifty--;	//decrementing to make sure 50-50 is not used again
 		      printf ("50-50 USED\n\n");
-		      /* eliminating 2 options by printing question with 2 options less */
+		      /* eliminating 2 options by printing question with 2 wrong options eliminated */
 		      for (int j = 0; j < NUMBER_OF_LINES_PER_QUESTION; j++)
 			{
-			  printf ("%s\n",
-				  (list + i)->originalFiftyFiftyQues[j]);
+			  printf ("%s\n",(list + i)->originalFiftyFiftyQues[j]);
 			}
 		      /* checking if the lifeline to swap the question is used */
 		      if (countSwap == 0)
 			{
-			  printf
-			    ("\nYou've already used Swap the Question.\n\n");
+			  printf("\nYou've already used Swap the Question.\n\n");
 			  break;
 			}
 		      printf ("Do you want to use another life-line (Press \'Y\' for Yes and \'N\' for No): ");	//asking if the contestant wants to use another lifeline
@@ -225,18 +216,15 @@ printing question
 			  if (prompt == 'Y' || prompt == 'y')
 			    {
 			      countSwap--;	//ensuring the lifeline is not used again
-			      printf
-				("\nYour only option now is swapping the ques.\n\n");
+			      printf("\nYour only option now is swapping the ques.\n\n");
 			      printf ("SWAP THE QUESTION USED\n\n");
 			      typeOfQuesUsed = 1;	//used to signify the swapped question is used
 			      /* displaying new question */
-			      for (int j = 0;
-				   j < NUMBER_OF_LINES_PER_QUESTION; j++)
+			      for (int j = 0; j < NUMBER_OF_LINES_PER_QUESTION; j++)
 				{
-				  printf ("%s\n",
-					  (list + i)->replacementQues[j]);
+				  printf ("%s\n", (list + i)->replacementQues[j]);
 				}
-			      break;
+			      break; // breaking the loop as both life-lines used
 			    }
 			  /* breaking the loop if contestant says that he does not want to use another lifeline */
 			  else if (prompt == 'N' || prompt == 'n')
@@ -252,9 +240,7 @@ printing question
 		      break;
 		    }
 		  /* case where contestant wants to swap the question */
-		  else
-		    if ((promptWhichLfeLine == 'S'
-			 || promptWhichLfeLine == 's'))
+		  else if ((promptWhichLfeLine == 'S'|| promptWhichLfeLine == 's'))
 		    {
 		      /* checking if lifeline had already been used */
 		      if (countSwap == 0)
@@ -286,19 +272,15 @@ printing question
 			  if (prompt == 'Y' || prompt == 'y')
 			    {
 			      countFiftyFifty--;	//decrementing to make sure lifeline is not used again
-			      printf
-				("\nYour only option now is using 50-50.\n\n");
+			      printf("\nYour only option now is using 50-50.\n\n");
 			      printf ("50-50 USED\n\n");
 			      typeOfQuesUsed = 1;	//signifying that the swapped question is used
 			      /* applying 50-50 to the swapped question */
-			      for (int j = 0;
-				   j < NUMBER_OF_LINES_PER_QUESTION; j++)
+			      for (int j = 0; j < NUMBER_OF_LINES_PER_QUESTION; j++)
 				{
-				  printf ("%s\n",
-					  (list +
-					   i)->replacementFiftyFiftyQues[j]);
+				  printf ("%s\n", (list +i)->replacementFiftyFiftyQues[j]);
 				}
-			      break;
+			      break; // exiting the loop as both life-lines already used
 			    }
 			  /* breaking out of the loop if second lifeline is not used by contestant */
 			  else if (prompt == 'N' || prompt == 'n')
@@ -311,10 +293,10 @@ printing question
 			      printf ("Please enter a valid Response: ");
 			    }
 			}
-		      break;
+		      break; // breaking out of the second innermost while loop
 		    }
 		}
-	      break;
+	      break; // breaking out of the innermost while loop
 	    }
 /* breaking out of the loop if contestant does not want to use lifeline */
 	  else if (promptLifeLine == 'N' || promptLifeLine == 'n')
@@ -339,24 +321,22 @@ printing question
       while (1)
 	{
 	  scanf ("\n");
-	  scanf ("%c", &ans);	//accepting response
+	  scanf ("%c", &ans);	//accepting response and storing it
 	  printf ("\n");
 	  /* breaking out of the loop if valid answer is entered */
-	  if (ans == 'a' || ans == 'A' || ans == 'b' || ans == 'B'
-	      || ans == 'c' || ans == 'C' || ans == 'd' || ans == 'D')
+	  if (ans == 'a' || ans == 'A' || ans == 'b' || ans == 'B'|| ans == 'c' || ans == 'C' || ans == 'd' || ans == 'D')
 	    {
 	      break;
 	    }
 	  /* asking for a valid response if answer not valid */
 	  else
 	    {
-	      printf
-		("Enter a valid response (\"A\" , \"B\" , \"C\" or \"D\"):");
+	      printf("Enter a valid response (\"A\" , \"B\" , \"C\" or \"D\"):");
 	    }
 
 	}
 
-      printf ("Do you want to lock it ( Press 'Y' for Yes and 'N' for No):");	//asking contestant to confirm their answer
+      printf ("Do you want to lock it ( Press 'Y' for Yes and 'N' for No):");	//asking contestant whether or not to finalize their answer for evaluation
       while (1)
 	{
 	  char prompt;
@@ -372,8 +352,7 @@ printing question
 	  /* asking for another answer to lock if contestant does not confirm */
 	  else if (prompt == 'N' || prompt == 'n')
 	    {
-	      printf
-		("Take your time and Enter the answer you want to lock:");
+	      printf("Take your time and Enter the answer you want to lock:");
 	      scanf ("\n");
 	      scanf ("%c", &finalAns);	//accepting final locked answer
 	      break;
@@ -381,8 +360,7 @@ printing question
 	  /* asking for a valid response if Y/y or N/n is not entered */
 	  else
 	    {
-	      printf
-		("Y and N are the only valid choices. Please Enter a valid Choice:");
+	      printf("Y and N are the only valid choices. Please Enter a valid Choice:");
 	    }
 
 	}
@@ -399,22 +377,27 @@ printing question
 	      updateDefiniteWorth (i, currentWorth, definiteWorth);	//updating the minimum amount that the contestant takes home
 	      printf ("Congratulations!!!,You have won %d rupees for this question\n", prize[i]);	//displaying incremental amount won after answeing the question
 	      printf ("\nYou currently have %d rupees in your pocket\n\n", *currentWorth);	//displaying total amount won after answering question
-	      if (i > 3)
-		printf ("\nEven if you get the next question wrong, you will take %d rupees home\n", *definiteWorth);	//displaying minimum amount the person takes home
+	      if (i > 3){
+		      printf ("\nEven if you get the next question wrong, you will take %d rupees home\n", *definiteWorth);	//displaying minimum amount the person takes home
+        }
 	    }
 	  else
 	    {			//if answer wrong
 	      printf ("\nSorry!!! But your answer is wrong , the correct ans was %c. You will take %d rupees home\n", (list + i)->originalCorrectAns, *definiteWorth);	//displaying correct answer and the amount they take home
-	      if (i < 5)
-		printf ("\nEven if you have lost here today, you have won hearts all over the world my friend!\n");	//displaying this if did not win anything
-	      if (i > 4 && i < 10)
-		printf ("\nYou have won something and something is not nothing so REJOICE!\n");	//displaying this if they won something
-	      if (i > 9)
-		printf ("\nEven if you are not a CROREPATI you still leave a LAHKPATI from this stage\n");	//displaying this if they had atleast won a lakh
+	      if (i < 5){
+		      printf ("\nEven if you have lost here today, you have won hearts all over the world my friend!\n");	//displaying this if did not win anything
+        }
+	      else if (i > 4 && i < 10){
+		      printf ("\nYou have won something and something is not nothing so REJOICE!\n");	//displaying this if they won something
+        }
+	      else if( i > 9 ){
+		      printf ("\nEven if you are not a CROREPATI you still leave a LAHKPATI from this stage\n");	//displaying this if they had atleast won a lakh
+        }
+
 	      return 0;		//ending program
 	    }
 	}
-      else
+      else // if in case replacement question used
 	{
 	  if (checkQuestion (finalAns, (list + i)->replacementCorrectAns))
 	    {			//checking if answer is correct
@@ -422,36 +405,38 @@ printing question
 	      updateDefiniteWorth (i, currentWorth, definiteWorth);	//updating the minimum amount that the contestant takes home
 	      printf ("Congratulations!!!,You have won %d rupees for this question\n", prize[i]);	//displaying incremental amount won after answeing the question
 	      printf ("\nYou currently have %d rupees in your pocket\n\n", *currentWorth);	//displaying total amount won after answering question
-	      if (i > 3)
-		printf ("\nEven if you get the next question wrong, you will take %d rupees home\n", *definiteWorth);	//displaying minimum amount the person takes home
+	      if (i > 3){
+        printf ("\nEven if you get the next question wrong, you will take %d rupees home\n", *definiteWorth);	//displaying minimum amount the person takes home
+      }
 	    }
 	  else
 	    {			//if answer wrong
 	      printf ("\nSorry!!! But your answer is wrong , the correct ans was %c. You will take %d rupees home\n", (list + i)->replacementCorrectAns, *definiteWorth);	//displaying correct answer and the amount they take home
-	      if (i < 5)
-		printf ("\nEven if you have lost here today, you have won hearts all over the world my friend!\n");	//displaying this if did not win anything
-	      if (i > 4 && i < 10)
-		printf ("\nYou have won something and something is not nothing so REJOICE!\n");	//displaying this if they won something
-	      if (i > 9)
-		printf ("\nEven if you are not a CROREPATI you still leave a LAHKPATI from this stage\n");	//displaying this if they had atleast won a lakh
+	      if (i < 5){
+		      printf ("\nEven if you have lost here today, you have won hearts all over the world my friend!\n");	//displaying this if did not win anything
+        }
+	      else if (i > 4 && i < 10){
+		      printf ("\nYou have won something and something is not nothing so REJOICE!\n");	//displaying this if they won something
+        }
+	      else if (i > 9 ){
+		      printf ("\nEven if you are not a CROREPATI you still leave a LAHKPATI from this stage\n");	//displaying this if they had atleast won a lakh
+        }
 	      return 0;		//ending program
 	    }
 	}
     }
-  printf ("\nMUBARAK HO!!! AAP CROREPATI BAN GAYE!!!\n\n");	//displaying message if they answer all questions
+  printf ("\nMUBARAK HO!!! AAP CROREPATI BAN GAYE!!!\n\n");	//displaying message if they answer all questions right!!!, truly an amazing feat if you ask us :)
 
 }
 
 /* funtion to update the toal amount person has won */
-void
-updateCurrentWorth (int reward, int *current)
+void updateCurrentWorth (int reward, int *current)
 {
   *current = *current + reward;	//updating *current
 }
 
 /* function to check if answer is correct */
-int
-checkQuestion (char ans, char correctAns)
+int checkQuestion (char ans, char correctAns)
 {
   if (ans == correctAns || ans == correctAns + 'a' - 'A')	//or is to make sure both upper and lower cases work
     return 1;			//returning 1 if answer correct
@@ -460,15 +445,13 @@ checkQuestion (char ans, char correctAns)
 }
 
 /* function to update minimum amount contestant takes home */
-void
-updateDefiniteWorth (int i, int *current, int *definite)
+void updateDefiniteWorth (int i, int *current, int *definite)
 {
   if (i == 4 || i == 9 || i == 13)
     (*definite) = (*current);	//updating *definite at definite take home levels
 }
 
-void
-fillOriginalQuestions (question array[], FILE * fp)
+void fillOriginalQuestions (question array[], FILE * fp)
 {
   for (int i = 0; i < NUMBER_OF_QUESTIONS; i++)
     {
@@ -481,8 +464,7 @@ fillOriginalQuestions (question array[], FILE * fp)
     }
 }
 
-void
-fillOriginalFiftyFiftyQuestions (question array[], FILE * fp)
+void fillOriginalFiftyFiftyQuestions (question array[], FILE * fp)
 {
   for (int i = 0; i < NUMBER_OF_QUESTIONS; i++)
     {
@@ -497,8 +479,7 @@ fillOriginalFiftyFiftyQuestions (question array[], FILE * fp)
     }
 }
 
-void
-fillReplacementQuestions (question array[], FILE * fp)
+void fillReplacementQuestions (question array[], FILE * fp)
 {
   for (int i = 0; i < NUMBER_OF_QUESTIONS; i++)
     {
@@ -512,8 +493,7 @@ fillReplacementQuestions (question array[], FILE * fp)
     }
 }
 
-void
-fillReplacementFiftyFiftyQuestions (question array[], FILE * fp)
+void fillReplacementFiftyFiftyQuestions (question array[], FILE * fp)
 {
   for (int i = 0; i < NUMBER_OF_QUESTIONS; i++)
     {
@@ -528,8 +508,7 @@ fillReplacementFiftyFiftyQuestions (question array[], FILE * fp)
     }
 }
 
-void
-fillOriginalAns (question array[])
+void fillOriginalAns (question array[])
 {
 
   for (int i = 0; i < NUMBER_OF_QUESTIONS; i++)
@@ -553,27 +532,17 @@ fillOriginalAns (question array[])
     }
 }
 
-void
-fillReplacementAns (question array[])
+void fillReplacementAns ( question array[] )
 {
-
-  for (int i = 0; i < NUMBER_OF_QUESTIONS; i++)
-    {
-
-      switch (i % 4)
-	{
-	case (0):
-	  (array + i)->replacementCorrectAns = 'A';
-	  break;
-	case (1):
-	  (array + i)->replacementCorrectAns = 'B';
-	  break;
-	case (2):
-	  (array + i)->replacementCorrectAns = 'C';
-	  break;
-	case (3):
-	  (array + i)->replacementCorrectAns = 'D';
-	  break;
-	}
-    }
+  for( int i = 0 ; i < NUMBER_OF_QUESTIONS ; i++ )
+  {
+      if (i==0||i==6||i==11)
+        ( array + i )->replacementCorrectAns = 'A' ;
+      else if (i==1||i==7)
+        ( array + i )->replacementCorrectAns = 'D' ;
+      else if (i==2||i==9||i==10||i==13)
+        ( array + i )->replacementCorrectAns = 'C' ;
+      else
+        ( array + i )->replacementCorrectAns = 'B' ;
+  }
 }
