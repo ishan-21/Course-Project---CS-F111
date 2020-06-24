@@ -508,28 +508,17 @@ void fillReplacementFiftyFiftyQuestions (question array[], FILE * fp)
     }
 }
 
-void fillOriginalAns (question array[])
-{
-
-  for (int i = 0; i < NUMBER_OF_QUESTIONS; i++)
-    {
-
-      switch (i % 4)
-	{
-	case (0):
-	  (array + i)->originalCorrectAns = 'A';
-	  break;
-	case (1):
-	  (array + i)->originalCorrectAns = 'B';
-	  break;
-	case (2):
-	  (array + i)->originalCorrectAns = 'C';
-	  break;
-	case (3):
-	  (array + i)->originalCorrectAns = 'D';
-	  break;
-	}
-    }
+void fillOriginalAns ( question array[] ){
+  for( int i = 0 ; i < NUMBER_OF_QUESTIONS ; i++ ){
+       if (i==4||i==11||i==12)
+       ( array + i )->originalCorrectAns = 'A' ;
+       else if (i==0||i==8||i==10||i==14)
+       ( array + i )->originalCorrectAns = 'C' ;
+       else if (i==3||i==7|i==13)
+       ( array + i )->originalCorrectAns = 'D' ;
+       else
+       ( array + i )->originalCorrectAns = 'B' ;
+  }
 }
 
 void fillReplacementAns ( question array[] )
