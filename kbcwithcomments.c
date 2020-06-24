@@ -151,6 +151,7 @@ loop to actually run the game
       char promptWhichLfeLine; // if yes then variable to ask which life-line?
       char prompt; // to ask for instruction to use another life-line or not
       char ans;  // to store tentative answer before actually locking it
+      char quitans; // to store tentative answer of if they want to quit
       char finalAns; // to store the final answer to be evaluated against the correct one
       char c;
 
@@ -315,8 +316,36 @@ printing original question
 	{
 	  printf ("YOU HAVE ALREADY USED BOTH THE LIFELINES\n\n");
 	}
-
-
+      /* asking if contestant wants to quit */
+      printf ("\nPress Y if you want to Quit and N if you do not want to:");
+      while (1)
+      {
+        scanf ("\n");
+    	  scanf ("%c", &quitans);	//accepting response and storing it
+    	  printf ("\n");
+        if (quitans == 'Y' || quitans == 'y')
+        {
+          char quitprompt;
+          printf ("If you quit now, you will still be taking home %d. If you choose to not quit and get the answer wrong, your prize money will be reduced to %d", *currentWorth, *definiteWorth);
+          printf ("Press Y if you want to quit and N if you do not want to:");
+          scanf ("\n");
+          scanf ("%c", &quitprompt);
+          printf ("\n");
+          if (quitprompt == 'Y' || quitprompt =='y')
+          {
+            printf ("A wise person knows when to quit. You will be taking home a hefty sum.");
+            return 0;
+          }
+          else if (quitprompt == 'N' || quitprompt =='n')
+            break;
+          else
+            continue;
+        }
+        else if (quitans == 'N' || quitans == 'n')
+          break;
+        else
+          continue;
+      }
       printf ("\nWhat do you think is the answer:");	//asking for user to enter answer for the question
       while (1)
 	{
@@ -324,18 +353,17 @@ printing original question
 	  scanf ("%c", &ans);	//accepting response and storing it
 	  printf ("\n");
 	  /* breaking out of the loop if valid answer is entered */
-	  if (ans == 'a' || ans == 'A' || ans == 'b' || ans == 'B'|| ans == 'c' || ans == 'C' || ans == 'd' || ans == 'D')
+	  if (ans == 'a' || ans == 'A' || ans == 'b' || ans == 'B'|| ans == 'c' || ans == 'C' || ans == 'd' || ans == 'D' || ans == 'q' || ans == 'Q')
 	    {
 	      break;
 	    }
 	  /* asking for a valid response if answer not valid */
 	  else
 	    {
-	      printf("Enter a valid response (\"A\" , \"B\" , \"C\" or \"D\"):");
+	      printf("Enter a valid response (\"A\" , \"B\" , \"C\" or \"D\" or \"Q\"):");
 	    }
 
 	}
-
       printf ("Do you want to lock it ( Press 'Y' for Yes and 'N' for No):");	//asking contestant whether or not to finalize their answer for evaluation
       while (1)
 	{
