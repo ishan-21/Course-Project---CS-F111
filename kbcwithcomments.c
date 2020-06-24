@@ -83,7 +83,7 @@ giving error message if file not represent
     }
 
 /*
-printing genearl information and instructions about the game
+printing general information and instructions about the game
 */
 
   printf ("WELCOME TO KAUN BANEGA CROREPATI!\n\n");
