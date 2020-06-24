@@ -508,30 +508,30 @@ void fillReplacementFiftyFiftyQuestions (question array[], FILE * fp)
     }
 }
 
-void fillOriginalAns ( question array[] ){
+void fillReplacementAns ( question array[] ){
   for( int i = 0 ; i < NUMBER_OF_QUESTIONS ; i++ ){
        if (i==4||i==11||i==12)
-       ( array + i )->originalCorrectAns = 'A' ;
+       ( array + i )->replacementCorrectAns = 'A' ;
        else if (i==0||i==8||i==10||i==14)
-       ( array + i )->originalCorrectAns = 'C' ;
+       ( array + i )->replacementCorrectAns = 'C' ;
        else if (i==3||i==7|i==13)
-       ( array + i )->originalCorrectAns = 'D' ;
+       ( array + i )->replacementCorrectAns = 'D' ;
        else
-       ( array + i )->originalCorrectAns = 'B' ;
+       ( array + i )->replacementCorrectAns = 'B' ;
   }
 }
 
-void fillReplacementAns ( question array[] )
+void fillOriginalAns ( question array[] )
 {
   for( int i = 0 ; i < NUMBER_OF_QUESTIONS ; i++ )
   {
       if (i==0||i==6||i==11)
-        ( array + i )->replacementCorrectAns = 'A' ;
+        ( array + i )->originalCorrectAns = 'A' ;
       else if (i==1||i==7)
-        ( array + i )->replacementCorrectAns = 'D' ;
+        ( array + i )->originalCorrectAns = 'D' ;
       else if (i==2||i==9||i==10||i==13)
-        ( array + i )->replacementCorrectAns = 'C' ;
+        ( array + i )->originalCorrectAns = 'C' ;
       else
-        ( array + i )->replacementCorrectAns = 'B' ;
+        ( array + i )->originalCorrectAns = 'B' ;
   }
 }
