@@ -1,183 +1,3 @@
-Q.1 On which creatures was the film 'Jurassic World' based?
-
-(A) Dolphins                   (B) Sharks                         
-
-(C) Dinosaurs                  (D) Elephants
-
-Q.2 In the Ramayana, his many heads did Ravana have?
-
-(A) Eight                      (B) Ten
-
-(C) Twelve                     (D) Fourteen
-
-Q.3 How many Zodiac signs are there? 
-
-(A)  Ten                        (B)  Twelve 
- 
-(C)  Fourteen                   (D)  Sixteen
-
-Q.4 Who has the faced the most number of deliveries in world cricket?
-
-(A) Sachin Tendulkar           (B) Shivnarine Chandrapaul
-
-(C) Jacque Kallis              (D) Rahul Dravid
-
-Q.5 Who was the Chairman of the Drafting committee of the Constituent of India?
-
-(A) B. R. Ambedkar   	         (B) Sardar Vallabhbhai Patel 
-
-(C) Rajaendra Prasad           (D) G. V. Mavalanka
-
-Q.6 Who won the booker prize in 1997 for the book " The God Of Small Things " ?
-
-(A) Anna Burns                (B) Arundhati Roy
-
-(C) Salman Rushdie            (D) George Sanders
-
-Q.7 Which of these national parks, reserved for tigers, is named after a river?
-
-(A) Dudhwa                    (B) Indrawati
-
-(C) Sunderbans                (D) Kanha
-
-Q.8 When is the International Yoga Day celebrated?
-
-(A) May 31                    (B) March 21
-
-(C) April 22                  (D) June 21
-
-Q.9  Which of the following holds the Seking DNA? 
-
-(A) Lysosome                  (B) Golzikay
-
-(C) Mitocochondra             (D) Centriol
-
-Q.10 The Asian Development Bank and the GoI signed a $177 million loan to upgrade 450 kilometers of state highways and major district roads in which state?
-
-(A) Andhra Pradesh             (B) Maharashtra
-
-(C) Tamil Nadu                 (D) Uttar Pradesh
-
-Q.11 Which Article deals Protection against Arrest and detention?
-
-(A) Art-24B                    (B) Art-23
-
-(C) Art-22                     (D) Art-21A
-
-Q.12 Of the following, which did not influence the fathers of Indian constitution? The Constitution of?
-
-(A) The USSR                   (B) Ireland
-
-(C) Canada                     (D) The USA 
-
-Q.13 'Luni Basin' is a part of which broad Physiographic division of Rajasthan?
- 
-(A) South - Eastern Plateau    (B) Aravalli Hilly Region
-
-(C) Eastern Plain              (D) Western Desert
-
-Q.14 In the 1830s who became the first person to develop vulcanized rubber?
-
-(A) Giovanni Batista Pirelli   (B) George Firestone
-
-(C) Jos Smith                  (D) Charles Goodyear
-
-Q.15 Who, in 1978, became the first person to be born in the continent of Antarctica?
-
-(A) George Hansen                (B) James Weddell  
-
-(C) Emilio Palma                 (D) Charles Wilkes
-
-Q.1 On which creatures was the film 'Jurassic World' based?
-
-(A)                            (B) Sharks                         
-
-(C) Dinosaurs                  (D) 
-
-Q.2 In the Ramayana, his many heads did Ravana have?
-
-(A) Eight                      (B) Ten
-
-(C)                            (D) 
-
-Q.3 How many Zodiac signs are there? 
-
-(A)                             (B)  Twelve 
- 
-(C)  Fourteen                   (D)   
-
-Q.4 Who has the faced the most number of delivaries in world cricket?
-
-(A) Sachin Tendulkar           (B) 
-
-(C) 		                         (D) Rahul Dravid
-
-Q.5 Who was the Chairman of the Drafting committee of the Constituent of India?
-
-(A) B. R. Ambedkar   	       (B) 
-
-(C)             	            (D) G. V. Mavalanka
-
-Q.6 Who won the booker prize in 1997 for the book " The God Of Small Things " ?
-
-(A) Anna Burns                (B) Arundhati Roy
-
-(C) 		                        (D) 
-
-Q.7 Which of these national parks, reserved for tigers, is named after a river?
-
-(A) Dudhwa                    (B) Indrawati
-
-(C)                           (D) 
-
-Q.8 When is the International Yoga Day celebrated?
-
-(A) May 31                    (B) 
-
-(C)                           (D) June 21
-
-Q.9  Which of the following holds the Seking DNA? 
-
-(A) Lysosome                  (B) 
-
-(C) Mitocochondra             (D) 
-
-Q.10 The Asian Development Bank and the GoI signed a $177 million loan to upgrade 450 kilometers of state highways and major district roads in which state?
-
-(A) Andhra Pradesh            (B) Maharashtra
-
-(C)                 	         (D) 
-
-Q.11 Which Article deals Protection against Arrest and detention?
-
-(A)                    	       (B) 
-
-(C) Art-22                     (D) Art-21A
-
-Q.12 Of the following, which did not influence the fathers of Indian constitution? The Constitution of?
-
-(A) The USSR                   (B) 
-
-(C)                            (D) The USA 
-
-Q.13 'Luni Basin' is a part of which broad Physiographic division of Rajasthan?
- 
-(A) South - Eastern Plateau    (B) 
-
-(C) Eastern Plain              (D) 
-
-Q.14 In the 1830s who became the first person to develop vulcanized rubber?
-
-(A) Giovanni Batista Pirelli   (B) 
-
-(C)                            (D) Charles Goodyear
-
-Q.15 Who, in 1978, became the first person to be born in the continent of Antarctica?
-
-(A) 		                         (B) 
-
-(C) Emilio Palma               (D) Charles Wilkes
-
 Q.1 In Walt Disney's cartoons, what kind of an animal is Mickey?
 
 (A) Mouse                      (B) Duck                        
@@ -357,3 +177,183 @@ Q.15 Which actor captained England in his only appearance in test cricket?
 (A) William Holden               (B) C Aubrey Smith 
 
 (C)                              (D) 
+
+Q.1 On which creatures was the film 'Jurassic World' based?
+
+(A) Dolphins                   (B) Sharks                         
+
+(C) Dinosaurs                  (D) Elephants
+
+Q.2 In the Ramayana, his many heads did Ravana have?
+
+(A) Eight                      (B) Ten
+
+(C) Twelve                     (D) Fourteen
+
+Q.3 How many Zodiac signs are there? 
+
+(A)  Ten                        (B)  Twelve 
+ 
+(C)  Fourteen                   (D)  Sixteen
+
+Q.4 Who has the faced the most number of deliveries in world cricket?
+
+(A) Sachin Tendulkar           (B) Shivnarine Chandrapaul
+
+(C) Jacque Kallis              (D) Rahul Dravid
+
+Q.5 Who was the Chairman of the Drafting committee of the Constituent of India?
+
+(A) B. R. Ambedkar   	         (B) Sardar Vallabhbhai Patel 
+
+(C) Rajaendra Prasad           (D) G. V. Mavalanka
+
+Q.6 Who won the booker prize in 1997 for the book " The God Of Small Things " ?
+
+(A) Anna Burns                (B) Arundhati Roy
+
+(C) Salman Rushdie            (D) George Sanders
+
+Q.7 Which of these national parks, reserved for tigers, is named after a river?
+
+(A) Dudhwa                    (B) Indrawati
+
+(C) Sunderbans                (D) Kanha
+
+Q.8 When is the International Yoga Day celebrated?
+
+(A) May 31                    (B) March 21
+
+(C) April 22                  (D) June 21
+
+Q.9  Which of the following holds the Seking DNA? 
+
+(A) Lysosome                  (B) Golzikay
+
+(C) Mitocochondra             (D) Centriol
+
+Q.10 The Asian Development Bank and the GoI signed a $177 million loan to upgrade 450 kilometers of state highways and major district roads in which state?
+
+(A) Andhra Pradesh             (B) Maharashtra
+
+(C) Tamil Nadu                 (D) Uttar Pradesh
+
+Q.11 Which Article deals Protection against Arrest and detention?
+
+(A) Art-24B                    (B) Art-23
+
+(C) Art-22                     (D) Art-21A
+
+Q.12 Of the following, which did not influence the fathers of Indian constitution? The Constitution of?
+
+(A) The USSR                   (B) Ireland
+
+(C) Canada                     (D) The USA 
+
+Q.13 'Luni Basin' is a part of which broad Physiographic division of Rajasthan?
+ 
+(A) South - Eastern Plateau    (B) Aravalli Hilly Region
+
+(C) Eastern Plain              (D) Western Desert
+
+Q.14 In the 1830s who became the first person to develop vulcanized rubber?
+
+(A) Giovanni Batista Pirelli   (B) George Firestone
+
+(C) Jos Smith                  (D) Charles Goodyear
+
+Q.15 Who, in 1978, became the first person to be born in the continent of Antarctica?
+
+(A) George Hansen                (B) James Weddell  
+
+(C) Emilio Palma                 (D) Charles Wilkes
+
+Q.1 On which creatures was the film 'Jurassic World' based?
+
+(A)                            (B) Sharks                         
+
+(C) Dinosaurs                  (D) 
+
+Q.2 In the Ramayana, his many heads did Ravana have?
+
+(A) Eight                      (B) Ten
+
+(C)                            (D) 
+
+Q.3 How many Zodiac signs are there? 
+
+(A)                             (B)  Twelve 
+ 
+(C)  Fourteen                   (D)   
+
+Q.4 Who has the faced the most number of delivaries in world cricket?
+
+(A) Sachin Tendulkar           (B) 
+
+(C) 		                         (D) Rahul Dravid
+
+Q.5 Who was the Chairman of the Drafting committee of the Constituent of India?
+
+(A) B. R. Ambedkar   	       (B) 
+
+(C)             	            (D) G. V. Mavalanka
+
+Q.6 Who won the booker prize in 1997 for the book " The God Of Small Things " ?
+
+(A) Anna Burns                (B) Arundhati Roy
+
+(C) 		                        (D) 
+
+Q.7 Which of these national parks, reserved for tigers, is named after a river?
+
+(A) Dudhwa                    (B) Indrawati
+
+(C)                           (D) 
+
+Q.8 When is the International Yoga Day celebrated?
+
+(A) May 31                    (B) 
+
+(C)                           (D) June 21
+
+Q.9  Which of the following holds the Seking DNA? 
+
+(A) Lysosome                  (B) 
+
+(C) Mitocochondra             (D) 
+
+Q.10 The Asian Development Bank and the GoI signed a $177 million loan to upgrade 450 kilometers of state highways and major district roads in which state?
+
+(A) Andhra Pradesh            (B) Maharashtra
+
+(C)                 	         (D) 
+
+Q.11 Which Article deals Protection against Arrest and detention?
+
+(A)                    	       (B) 
+
+(C) Art-22                     (D) Art-21A
+
+Q.12 Of the following, which did not influence the fathers of Indian constitution? The Constitution of?
+
+(A) The USSR                   (B) 
+
+(C)                            (D) The USA 
+
+Q.13 'Luni Basin' is a part of which broad Physiographic division of Rajasthan?
+ 
+(A) South - Eastern Plateau    (B) 
+
+(C) Eastern Plain              (D) 
+
+Q.14 In the 1830s who became the first person to develop vulcanized rubber?
+
+(A) Giovanni Batista Pirelli   (B) 
+
+(C)                            (D) Charles Goodyear
+
+Q.15 Who, in 1978, became the first person to be born in the continent of Antarctica?
+
+(A) 		                         (B) 
+
+(C) Emilio Palma               (D) Charles Wilkes
