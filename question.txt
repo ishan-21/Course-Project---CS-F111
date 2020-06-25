@@ -3,50 +3,56 @@ Q.1 In Walt Disney's cartoons, what kind of an animal is Mickey?
 (A) Mouse                      (B) Duck                        
 
 (C) Dog                        (D) Cat
+Mickey was the first cartoon character to ever speak. 
 
 Q.2 With which number would you associate fictional character James Bond?
 
 (A) 747                        (B) 303
 
 (C) 420                        (D) 007
+Ian Flemming used a gold-plated Royal Typewriter to write the James Bond novels
 
 Q.3 Conjunctivitis affects which part of the body? 
 
 (A)  Nose                       (B)  Ears 
  
 (C)  Eyes                       (D)  Kidney
+You can't be born with conjunctivitis
 
 Q.4 In which of these services will you find a Wing Commander?
 
 (A) Army                      (B) Air Force
 
 (C) Police                    (D) Navy
+IAF is the fourth largest air force in the world after the US, Russia and China
 
 Q.5 Gidda is the Traditional folk dance form of which Indian state?
 
 (A) Gujrat        	              (B) Punjab
 
 (C) Orissa                       (D) Kerela
+The dance is often considered derived from the ancient dance known as the ring dance
 
 Q.6 In which sport is the Rovers Cup awarded?
 
 (A) Tennis                   (B) Football
 
 (C) Golf                     (D) Hockey
-
-// this is buffer line
+Bagan became the first Indian club to play in the Rovers Cup in 1921
 
 Q.7 Which two countries fought the first Opium War in the nineteenth century? 
 
 (A) Britain and China         (B) Russia and China
 
 (C) Britain and Japan         (D) China and Japan
+Lin, the Emperor’s viceroy, wrote to Queen Victoria asking her to intervene in the war
 
 Q.8 Which of the following diseases is not caused by Bacteria?
 
 (A) Leprosy                   (B) Tuberculosis
 
 (C) Typhoid                   (D) Chicken Pox
+
 
 Q.9 Which of these feeds almost exclusively on snakes?
 
