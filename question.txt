@@ -1,4 +1,4 @@
-Q.1 In Walt Disney's cartoons, what kind of an animal is Mickey?
+﻿Q.1 In Walt Disney's cartoons, what kind of an animal is Mickey?
 
 (A) Mouse                      (B) Duck                        
 
@@ -356,7 +356,7 @@ Q.15 Who, in 1978, became the first person to be born in the continent of Antarc
 
 (A) 		                         (B) 
 
-(C) Emilio Palma               (D) Charles Wilkes
+(C) Emilio Palma                         (D) Charles Wilkes
 
 Mickey was the first cartoon character to ever speak
 Ian Flemming used a gold-plated Royal Typewriter to write the James Bond novels
@@ -388,5 +388,8 @@ The USSR formed a government department was founded to study Lenin's brain
 Rajasthan is the largest state of India 
 Goodyear began his career as a partner in his father's hardware business, which went bankrupt in 1830
 Palma was born in Fortín Sargento Cabral at the Esperanza Base, near the tip of the Antarctic Peninsula, and weighed 3.4 kg
+
+// this is buffer line
+
 
 
