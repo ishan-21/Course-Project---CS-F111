@@ -3,105 +3,90 @@ Q.1 In Walt Disney's cartoons, what kind of an animal is Mickey?
 (A) Mouse                      (B) Duck                        
 
 (C) Dog                        (D) Cat
-Mickey was the first cartoon character to ever speak 
-
+ 
 Q.2 With which number would you associate fictional character James Bond?
 
 (A) 747                        (B) 303
 
 (C) 420                        (D) 007
-Ian Flemming used a gold-plated Royal Typewriter to write the James Bond novels
 
 Q.3 Conjunctivitis affects which part of the body? 
 
 (A)  Nose                       (B)  Ears 
  
 (C)  Eyes                       (D)  Kidney
-You can't be born with conjunctivitis
 
 Q.4 In which of these services will you find a Wing Commander?
 
 (A) Army                      (B) Air Force
 
 (C) Police                    (D) Navy
-IAF is the fourth largest air force in the world after the US, Russia and China
 
 Q.5 Gidda is the Traditional folk dance form of which Indian state?
 
 (A) Gujrat        	              (B) Punjab
 
 (C) Orissa                       (D) Kerela
-The dance is often considered derived from the ancient dance known as the ring dance
 
 Q.6 In which sport is the Rovers Cup awarded?
 
 (A) Tennis                   (B) Football
 
 (C) Golf                     (D) Hockey
-Bagan became the first Indian club to play in the Rovers Cup in 1921
 
 Q.7 Which two countries fought the first Opium War in the nineteenth century? 
 
 (A) Britain and China         (B) Russia and China
 
 (C) Britain and Japan         (D) China and Japan
-Lin, the Emperor’s viceroy, wrote to Queen Victoria asking her to intervene in the war
 
 Q.8 Which of the following diseases is not caused by Bacteria?
 
 (A) Leprosy                   (B) Tuberculosis
 
 (C) Typhoid                   (D) Chicken Pox
-Chickenpox is caused by the varicella zoster virus
 
 Q.9 Which of these feeds almost exclusively on snakes?
 
 (A) Gharial                   (B) King Cobra
 
 (C) Golden Eagle              (D) Python
-The King Cobra is the longest venemous snake in the world
 
 Q.10 Which country did the Rana Family rule between 1845-1951?
 
 (A) Bhutan                     (B) Sikkim
 
 (C) Nepal                      (D) Burma
-Rana regime ended with Mohan Shamsher Rana, as the last Prime Minister of Rana Oligarchy
 
 Q.11 The Tulu Language is native to which state of India?
 
 (A) Andhra Pradesh             (B) Orissa
 
 (C) Karnatka                   (D) Gujrat
-Efforts are also being made to include Tulu in the list of Official languages of India
 
 Q.12 Which of these old princely states is now in Pakistan?
 
 (A) Bahawalpur                 (B) Malerkotla
 
 (C) Junagarh                   (D) Arcot
-Bahawalpur is the 11th largest city in Pakistan by population as per 2017 census with a population of 762,111
-  
+
 Q.13 In which fort near Junnar was Chattrapati Shivaji born?
  
 (A) Raigadh                    (B) Shivneri
 
 (C) Janjira                    (D) Pratapgadh
-Shivneri is known to be a place of Buddhist dominion from the 1st century AD
 
 Q.14 Which of these is not an official language of the United Nation?
 
 (A) Spanish                    (B) French
 
 (C) Italian                    (D) English 
-Italian is the fifth most studied language in the US
 
 Q.15 Which actor captained England in his only appearance in test cricket?
 
 (A) William Holden               (B) C Aubrey Smith 
 
 (C) Alan Ladd                    (D) W C Fields
- C Aubrey Smith was known for his roles in The Four Fathers (1939), Dr. Jekyll and Mr. Hyde (1941), and in And Then There Were None (1945)
 
 Q.1 In Walt Disney's cartoons, what kind of an animal is Mickey?
 
@@ -198,105 +183,90 @@ Q.1 On which creatures was the film 'Jurassic World' based?
 (A) Dolphins                   (B) Sharks                         
 
 (C) Dinosaurs                  (D) Elephants
-Dinosaurs prospered for over a 150 million years
 
 Q.2 In the Ramayana, his many heads did Ravana have?
 
 (A) Eight                      (B) Ten
 
 (C) Twelve                     (D) Fourteen
-Ravana was known to be well-versed in the six shastras and the four Vedas.
 
 Q.3 How many Zodiac signs are there? 
 
 (A)  Ten                        (B)  Twelve 
  
 (C)  Fourteen                   (D)  Sixteen
-This circle of 360 degrees is divided into 12 equal sectors of 30 degrees each. Each of these segments is represented by one zodiac sign
 
 Q.4 Who has the faced the most number of deliveries in world cricket?
 
 (A) Sachin Tendulkar           (B) Shivnarine Chandrapaul
 
 (C) Jacque Kallis              (D) Rahul Dravid
-Rahul holds the distinction of being the only Indian to score centuries in four consecutive test-match inning
 
 Q.5 Who was the Chairman of the Drafting committee of the Constituent of India?
 
 (A) B. R. Ambedkar   	         (B) Sardar Vallabhbhai Patel 
 
 (C) Rajaendra Prasad           (D) G. V. Mavalanka
-Dr. Ambedkar is the only Indian whose statue is attached to Karl Marx in the London Museum
 
 Q.6 Who won the booker prize in 1997 for the book " The God Of Small Things " ?
 
 (A) Anna Burns                (B) Arundhati Roy
 
 (C) Salman Rushdie            (D) George Sanders
-Arundhati Roy and her first husband Gerard Da Cunha would sell cakes in Goa for a living
 
 Q.7 Which of these national parks, reserved for tigers, is named after a river?
 
 (A) Dudhwa                    (B) Indrawati
 
 (C) Sunderbans                (D) Kanha
-Indrawati National Park is the finest and most famous wildlife parks of Chhattisgarh.
 
 Q.8 When is the International Yoga Day celebrated?
 
 (A) May 31                    (B) March 21
 
 (C) April 22                  (D) June 21
-International Yoga Day is celebrated on June 21 every year after PM Modi during his UNGA speech proposed it
 
 Q.9  Which of the following holds the Seking DNA? 
 
 (A) Lysosome                  (B) Golzikay
 
 (C) Mitocochondra             (D) Centriol
-Mitochondria play a critical role in the generation of metabolic energy in eukaryotic cells
 
 Q.10 The Asian Development Bank and the GoI signed a $177 million loan to upgrade 450 kilometers of state highways and major district roads in which state?
 
 (A) Andhra Pradesh             (B) Maharashtra
 
 (C) Tamil Nadu                 (D) Uttar Pradesh
-Maharashtra is 3rd largest state in India with population close to 12 crores
 
 Q.11 Which Article deals Protection against Arrest and detention?
 
 (A) Art-24B                    (B) Art-23
 
 (C) Art-22                     (D) Art-21A
-Article 22 is supposed to ensure that no Indian citizen can be detained or have his or her freedom taken away from him or her without proper cause
 
 Q.12 Of the following, which did not influence the fathers of Indian constitution? The Constitution of?
 
 (A) The USSR                   (B) Ireland
 
 (C) Canada                     (D) The USA 
-The USSR formed a government department was founded to study Lenin's brain
 
 Q.13 'Luni Basin' is a part of which broad Physiographic division of Rajasthan?
  
 (A) South - Eastern Plateau    (B) Aravalli Hilly Region
 
 (C) Eastern Plain              (D) Western Desert
-Rajasthan is the largest state of India 
 
 Q.14 In the 1830s who became the first person to develop vulcanized rubber?
 
 (A) Giovanni Batista Pirelli   (B) George Firestone
 
 (C) Jos Smith                  (D) Charles Goodyear
-Goodyear began his career as a partner in his father's hardware business, which went bankrupt in 1830
 
 Q.15 Who, in 1978, became the first person to be born in the continent of Antarctica?
 
 (A) George Hansen                (B) James Weddell  
 
 (C) Emilio Palma                 (D) Charles Wilkes
-Palma was born in Fortín Sargento Cabral at the Esperanza Base, near the tip of the Antarctic Peninsula, and weighed 3.4 kg
 
 Q.1 On which creatures was the film 'Jurassic World' based?
 
@@ -387,3 +357,36 @@ Q.15 Who, in 1978, became the first person to be born in the continent of Antarc
 (A) 		                         (B) 
 
 (C) Emilio Palma               (D) Charles Wilkes
+
+Mickey was the first cartoon character to ever speak
+Ian Flemming used a gold-plated Royal Typewriter to write the James Bond novels
+You can't be born with conjunctivitis
+IAF is the fourth largest air force in the world after the US, Russia and China
+The dance is often considered derived from the ancient dance known as the ring dance
+Bagan became the first Indian club to play in the Rovers Cup in 1921
+Lin, the Emperor’s viceroy, wrote to Queen Victoria asking her to intervene in the war
+Chickenpox is caused by the varicella zoster virus
+The King Cobra is the longest venemous snake in the world
+Rana regime ended with Mohan Shamsher Rana, as the last Prime Minister of Rana Oligarchy
+Efforts are also being made to include Tulu in the list of Official languages of India
+Bahawalpur is the 11th largest city in Pakistan by population as per 2017 census with a population of 762,111
+Shivneri is known to be a place of Buddhist dominion from the 1st century AD
+Italian is the fifth most studied language in the US
+C Aubrey Smith was known for his roles in The Four Fathers (1939), Dr. Jekyll and Mr. Hyde (1941), and in And Then There Were None (1945)
+Dinosaurs prospered for over a 150 million years
+Ravana was known to be well-versed in the six shastras and the four Vedas.
+This circle of 360 degrees is divided into 12 equal sectors of 30 degrees each. Each of these segments is represented by one zodiac sign
+Rahul holds the distinction of being the only Indian to score centuries in four consecutive test-match inning
+Dr. Ambedkar is the only Indian whose statue is attached to Karl Marx in the London Museum
+Arundhati Roy and her first husband Gerard Da Cunha would sell cakes in Goa for a living
+Indrawati National Park is the finest and most famous wildlife parks of Chhattisgarh.
+International Yoga Day is celebrated on June 21 every year after PM Modi during his UNGA speech proposed it
+Mitochondria play a critical role in the generation of metabolic energy in eukaryotic cells
+Maharashtra is 3rd largest state in India with population close to 12 crores
+Article 22 is supposed to ensure that no Indian citizen can be detained or have his or her freedom taken away from him or her without proper cause
+The USSR formed a government department was founded to study Lenin's brain
+Rajasthan is the largest state of India 
+Goodyear began his career as a partner in his father's hardware business, which went bankrupt in 1830
+Palma was born in Fortín Sargento Cabral at the Esperanza Base, near the tip of the Antarctic Peninsula, and weighed 3.4 kg
+
+
