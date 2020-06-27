@@ -439,7 +439,7 @@ else if ( i == 10 ){
 	      updateDefiniteWorth (i, currentWorth, definiteWorth);	//updating the minimum amount that the contestant takes home
 	      printf ("Congratulations!!!,You have won %d rupees for this question\n\n", prize[i]);	//displaying incremental amount won after answeing the question
 	      printf ("You currently have %d rupees in your pocket\n\n", *currentWorth);	//displaying total amount won after answering question
-	      if (i > 3){
+	      if (i > 3 && i < 14){
 		      printf ("Even if you get the next question wrong, you will take %d rupees home\n\n", *definiteWorth);	//displaying minimum amount the person takes home
         }
 	    }
@@ -471,7 +471,7 @@ else if ( i == 10 ){
 	      updateDefiniteWorth (i, currentWorth, definiteWorth);	//updating the minimum amount that the contestant takes home
 	      printf ("Congratulations!!!,You have won %d rupees for this question\n\n", prize[i]);	//displaying incremental amount won after answeing the question
 	      printf ("You currently have %d rupees in your pocket\n\n", *currentWorth);	//displaying total amount won after answering question
-	      if (i > 3){
+	      if (i > 3 && i < 14 ){
         printf ("Even if you get the next question wrong, you will take %d rupees home\n\n", *definiteWorth);	//displaying minimum amount the person takes home
       }
 	    }
