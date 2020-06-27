@@ -356,7 +356,7 @@ else if ( i == 10 ){
           printf ("\n");
           if (quitprompt == 'Y' || quitprompt =='y')
           {
-            printf ("A wise person knows when to quit. You will be taking home a hefty sum.");
+            printf ("They say a wise person knows when to quit.\n\n");
             return 0;
           }
           else if (quitprompt == 'N' || quitprompt =='n'){
