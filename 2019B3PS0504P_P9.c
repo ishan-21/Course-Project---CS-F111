@@ -127,7 +127,7 @@ displaying prizes
 
   char start;
   printf("PRESS ANY KEY ON YOUR KEYBOARD TO CONTINUE ( and then press \" ENTER \" if you haven't pressed ENTER ):");
-  start = getchar ();		// here I did not use system("pause") because it's a window command and would not work in MAC or LINUX
+  start = getchar ();		// here we did not use system("pause") because it's a window command and would not work in MAC or LINUX
                         // for similar reasons we didn't use graphics and sound
 /*
 starting game if character entered
@@ -559,7 +559,7 @@ void fillOriginalQuestions (question array[], FILE * fp)
     {
       for (int j = 0; j < NUMBER_OF_LINES_PER_QUESTION; j++)
 	{
-	  fgets ((array + i)->originalQues[j], 400, fp);
+	  fgets ((array + i)->originalQues[j], 400, fp);// reading one line at a time from the text file
 	  (array + i)->originalQues[j][strlen ((array + i)->originalQues[j]) -1] = '\0'; // fgets assigns last char to be new line but we have already accounted for this in our text file so we remove that here
 	}
     }
@@ -574,7 +574,7 @@ void fillOriginalFiftyFiftyQuestions (question array[], FILE * fp)
     {
       for (int j = 0; j < NUMBER_OF_LINES_PER_QUESTION; j++)
 	{
-	  fgets ((array + i)->originalFiftyFiftyQues[j], 400, fp);
+	  fgets ((array + i)->originalFiftyFiftyQues[j], 400, fp);// reading one line at a time from the text file
 	  (array + i)->originalFiftyFiftyQues[j][strlen ((array + i)->originalFiftyFiftyQues[j]) -1] = '\0';// fgets assigns last char to be new line but we have already accounted for this in our text file so we remove that here
 	}
     }
@@ -589,7 +589,7 @@ void fillReplacementQuestions (question array[], FILE * fp)
     {
       for (int j = 0; j < NUMBER_OF_LINES_PER_QUESTION; j++)
 	{
-	  fgets ((array + i)->replacementQues[j], 400, fp);
+	  fgets ((array + i)->replacementQues[j], 400, fp);// reading one line at a time from the text file
 	  (array + i)->replacementQues[j][strlen ((array + i)->replacementQues[j]) -1] = '\0';// fgets assign last char to be new line but we have already accounted for this in our text file so we remove that here
 	}
     }
@@ -604,7 +604,7 @@ void fillReplacementFiftyFiftyQuestions (question array[], FILE * fp)
     {
       for (int j = 0; j < NUMBER_OF_LINES_PER_QUESTION; j++)
 	{
-	  fgets ((array + i)->replacementFiftyFiftyQues[j], 400, fp);
+	  fgets ((array + i)->replacementFiftyFiftyQues[j], 400, fp);// reading one line at a time from the text file
 	  (array + i)->replacementFiftyFiftyQues[j][strlen ((array + i)->replacementFiftyFiftyQues[j]) - 1] = '\0';// fgets assigns last char to be new line but we have already accounted for this in our text file so we remove that here
 	}
     }
@@ -615,7 +615,7 @@ void fillInfoOriginal(question array[], FILE * fp)
 {
   for (int i = 0; i < NUMBER_OF_QUESTIONS; i++)
     {
-	  fgets ((array + i)->infoOriginalQues, 400, fp);
+	  fgets ((array + i)->infoOriginalQues, 400, fp);// reading one line at a time from the text file
 	  (array + i)->infoOriginalQues[strlen ((array + i)->infoOriginalQues) - 1] = '\0';// fgets assigns last char to be new line but we have already accounted for this in our text file so we remove that here
     }
 }
@@ -625,7 +625,7 @@ void fillInfoReplacement(question array[], FILE * fp)
 {
   for (int i = 0; i < NUMBER_OF_QUESTIONS; i++)
     {
-	  fgets ((array + i)->infoReplacementQues, 400, fp);
+	  fgets ((array + i)->infoReplacementQues, 400, fp); // reading one line at a time from the text file
 	  (array + i)->infoReplacementQues[strlen ((array + i)->infoReplacementQues) - 1] = '\0';// fgets assigns last char to be new line but we have already accounted for this in our text file so we remove that here
     }
 }
