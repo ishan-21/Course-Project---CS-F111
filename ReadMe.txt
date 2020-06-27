@@ -34,7 +34,7 @@ Our code has 600+ lines, this is mainly because:-
    This also took a very large portion of our code.
 
 ############################################################
-Description of how to run the code and observe the output: (This is just a sample. You are expected to write in much more detail!!!)
+Description of how to run the code and observe the output: 
 1. We're attaching the .c file. There are no .h files in our project.
 2. The procedure to running the code is fairly simple and usual like ordinary .c file. There are no special instructions.
 3. We are however, attaching the "question.txt" file which is highly important for the working of the code. 
