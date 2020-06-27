@@ -162,6 +162,7 @@ loop to actually run the game
       char quitans; // to store tentative answer of if they want to quit
       char finalAns; // to store the final answer to be evaluated against the correct one
 
+      typeOfQuesUsed = 0;
 /*
 printing original question
 */
