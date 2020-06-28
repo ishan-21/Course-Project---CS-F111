@@ -104,8 +104,9 @@ printing general information and instructions about the game
   printf("THIS GAME HAS 15 QUESTIONS\n\nEACH QUESTION HAS 4 CHOICES OUT OF WHICH ONLY ONE IS CORRECT\n\n");
   printf("WRONG ANSWER TO ANY OF THE QUESTIONS LEADS TO IMMEDIATE TERMINATION\n\n");
   printf("WE ALSO PROVIDE 2 LIFE-LINES: 50-50 AND FLIP THE QUESTION\n\n");
-  printf("50-50: THIS WILL LEAD TO REMOVAL OF 2 WRONG CHOICES OUT OF THE TOTAL 4\n\n");
-  printf("SWAP THE QUESTION: THIS WILL CHANGE THE CURRENT QUESTION ENTIRELY\n\n");
+  printf("50-50: THIS WILL LEAD TO REMOVAL OF 2 WRONG CHOICES OUT OF THE TOTAL 4. Press 'F' after prompting to use life-line to user this\n\n");
+  printf("SWAP THE QUESTION: THIS WILL CHANGE THE CURRENT QUESTION ENTIRELY.  Press 'S' after prompting to use life-line to user this\n\n");
+  printf("You will also have the option to Quit Q.6 onwards\n\n");
   printf ("PRIZE MONEY DISTRIBUTION:-\n\n");
   printf("QUESTION NUMBER\t   PRIZE MONEY FOR THAT QUESTION\t   NET PRIZE MONEY UPTO THAT QUESTION\n");
 
